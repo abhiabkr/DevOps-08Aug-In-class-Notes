@@ -2,16 +2,34 @@ PULL files from external repo to local repo
 ***************************************************
 Create files from github and pull the file into local repo
 
-# git pull origin 
+# git pull origin master    /////  pull from origin i.e remote repos and from master branch whatever is the changes.
 # ls ==> new file will be there
 
 Fetch files from external repo to local repo
 ******************************************************
 Create a new file on external repo 
 
-# git fetch origin
+# git fetch origin master  //////This command will only fetch the changes but does not merges it with LR or WD. it stores the fetch in .git/fetch head 
+folder we can go to that fetch head and copy the id and return to cd .. and write git diff id....we will see which file has been fetched. and choose
+which one to take by executing (git checkout origin/branch_name -- file_name). it will merge the file in WD staged area in green color only not to LR. We
+have to commit.
+fetch is a read only command and pull is read write.
 
-# git pull origin  ===> pull= fetch +merge
+# git pull origin master  ===> pull= fetch +merge.  //// anyone can pull 
+*********************************************************
+
+How can we push the files from another branch to remote repo
+* First check the branches git branch
+* now checkout to someother branch other than master  
+git checkout b1
+* check git log make file add and commit and then puch to origin.It will not go to master branch
+* as command is 
+git push origin b1. 
+It will create a b1 brnch in github.
+
+Now we have made a b1 branch and pushed changes to it and want to merge it with master so the developer will create a pull request
+base master compare b1. this pull request will go to owner of the repository.
+
 
 # git pull remotebranch localbranchname
 # ls    //All files will be there in local as same as remote
@@ -57,6 +75,27 @@ All changes will be there
 
 Cloning a repository
 *************************************************
+Suppose a new team member has joined he doesnot have any code. he need to create a LR and WD.
+But instead of doing this he can clone. He will not create LR or WD
+he just have to install git and run command from his machine
+** git clone url of remote repo
+
+This command will create WD and LR.
+
+***************************************************
+
+If we want like b1 branch from remote repo then 
+git clone -b b1 urlOfThe Repo
+
+it will fetch the specific branch only
+
+
+***************************************************
+
+Forking
+
+copying someother repository into some others account
+
 Go to github--> create a new repository 
 Use this repo:
 https://github.com/Sonal0409/7AMGITDEMO
