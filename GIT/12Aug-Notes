@@ -22,7 +22,7 @@ How can we push the files from another branch to remote repo
 * First check the branches git branch
 * now checkout to someother branch other than master  
 git checkout b1
-* check git log make file add and commit and then puch to origin.It will not go to master branch
+* check git log make file add and commit and then push to origin.It will not go to master branch
 * as command is 
 git push origin b1. 
 It will create a b1 brnch in github.
