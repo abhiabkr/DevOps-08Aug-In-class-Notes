@@ -45,11 +45,11 @@ Set up on Jenkins to integrate with JAVA GIT & Maven :
 Jenkins--> Manage Jenkins-->Global Tool configuration
 
 Go to JDK section
-Click on Add JDL
+Click on Add JDk
 In this give:
 
 2. JDK name as myjava
- Uncheck checkbox -- install automatically
+ Uncheck checkbox -- install automatically as we have already installed java on our Jenkins Server
 
 3 go to terminal/server ==> mvn --version
 
@@ -77,7 +77,7 @@ In jenkins there are 2 types of syntax to write pipeline
 
 Was used to write pipelines with Jenkins version1
 
-it was very difficult jenkins admino write the code, in order the code one has to be very good at DSL scripting
+it was very difficult jenkins admin to write the code, in order to write the code one has to be very good at DSL scripting
 
 the pipeline always starts with keyword "node"
 
@@ -88,12 +88,12 @@ There is no fixed template or stages or steps that one can follow
 > declarative Pipeline syntax
 
 With Jenkisn 2 we now use declarative pipeline code to write CICD pipelines
-It is very strcutured, and has differenct sections to perform various task of pipeline
+It is very structured, and has differenct sections to perform various task of pipeline
 It very easy to write and easy to read
 It is declarative in nature 
- key value
+      key  value
 eg:  tool jenkins
-     jdk myjava
+     jdk  myjava
 
 for all who are new to jenkins pipelines, Jenkins provide a code Snippet generator, using which you can generate your pipeline and learn it very easily
 
